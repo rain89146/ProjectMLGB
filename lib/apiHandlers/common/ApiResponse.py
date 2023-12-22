@@ -13,13 +13,9 @@ class ApiResponse:
 
     #   api response
     def GetApiResponse(self) -> dict[str, any]:
-        try:
-            return {
-                'status': self.status,
-                'message': self.message,
-                'exception': self.exception,
-                'response': self.response
-            }
-        except Exception as ex:
-            print(type(ex).__name__)
-            raise ex
+        return {
+            'status': self.status,
+            'message': self.message,
+            'exception': self.exception,
+            'response': self.response
+        }
